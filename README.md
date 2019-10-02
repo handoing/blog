@@ -1,5 +1,5 @@
-<a href="https://handoing.github.io/"><img src="https://img.shields.io/badge/link-blog-green"></a>
+[![Blog](https://img.shields.io/badge/link-blog-green)](https://handoing.github.io/){:target="_blank"}
 
 # My Blog
 
-[Hello](./docs/blog/hello.md)
+* [Hello](https://handoing.github.io/blog/hello.html){:target="_blank"}

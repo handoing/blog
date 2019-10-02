@@ -2,7 +2,17 @@ const fs = require('fs');
 const path = require('path');
 
 const commentDataPath = path.join(__dirname, './comment.json');
-const comment = fs.readFileSync(commentDataPath, 'utf-8');
+const commentKeys = fs.readFileSync(commentDataPath, 'utf-8');
+const openComment = false;
+const comment = openComment ? {
+    comment: {
+        repo: "blog",
+        owner: "handoing",
+        locale: "zh",
+        perPage: 5,
+        ...JSON.parse(commentKeys)
+    }
+} : {};
 
 module.exports = {
     theme: 'vuepress-theme-yubisaki',
@@ -25,14 +35,6 @@ module.exports = {
         per_page: 5,
         date_format: 'yyyy-MM-dd',
         footer: '钢铁般的回忆对你说句爱你三千遍',
-        comment: {
-            repo: "blog",
-            owner: "handoing",
-            locale: "zh",
-            perPage: 5,
-            autoCreateIssue: true,
-            ...JSON.parse(comment)
-        },
         nav: [{
                 text: '首页',
                 link: '/'
@@ -42,13 +44,14 @@ module.exports = {
                 link: '/tag/'
             },
             {
-                text: 'GITHUB',
-                link: 'https://github.com/handoing'
-            },
-            {
                 text: '关于我',
                 link: '/about/'
             },
-        ]
+            {
+                text: 'GITHUB',
+                link: 'https://github.com/handoing'
+            },
+        ],
+        ...comment
     }
 }
