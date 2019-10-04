@@ -1,8 +1,16 @@
 ---
-title: about
+title: About
 date: 2019/10/01
 ---
 
-## About me
+## 关于我
 
-Here are my personal profile
+前端工程师（FE）
+
+- Javascript
+- Dart
+- C++
+
+## 联系方式
+
+- Github：[@handoing](https://github.com/handoing)
