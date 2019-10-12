@@ -1,18 +1,25 @@
 const fs = require('fs');
 const path = require('path');
 
-const commentDataPath = path.join(__dirname, './comment.json');
-const commentKeys = fs.readFileSync(commentDataPath, 'utf-8');
 const openComment = false;
-const comment = openComment ? {
-    comment: {
-        repo: "blog",
-        owner: "handoing",
-        locale: "zh",
-        perPage: 5,
-        ...JSON.parse(commentKeys)
+let comment = {};
+
+if (openComment) {
+  const commentDataPath = path.join(__dirname, './comment.json');
+  const commentExist = fs.existsSync(commentDataPath);
+  if (commentExist) {
+    const commentKeys = fs.readFileSync(commentDataPath, 'utf-8');
+    comment = {
+        comment: {
+            repo: "blog",
+            owner: "handoing",
+            locale: "zh",
+            perPage: 5,
+            ...JSON.parse(commentKeys)
+        }
     }
-} : {};
+  }
+}
 
 module.exports = {
     theme: 'vuepress-theme-yubisaki',
