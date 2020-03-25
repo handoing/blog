@@ -24,8 +24,8 @@ if (openComment) {
 module.exports = {
     theme: 'vuepress-theme-yubisaki',
     base: "/",
-    title: 'Handoing Blog',
-    description: 'Handoing Blog',
+    title: 'Hank Blog',
+    description: 'Hank Blog',
     serviceWorker: true,
     evergreen: true,
     markdown: {
