@@ -129,4 +129,4 @@ P3 | P4 | P5 | P6 | P7 | P8 | P9
 ### ❤️最后，感谢职业生涯中给予我帮助的每一个你！
 
 
-![公众号](/common/qrcode.png)
+![公众号](/common/qrcode_new.png)
